@@ -1,0 +1,26 @@
+{
+  "name": "Just another screen recorder",
+  "description": "This will be filled",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["tabs", "activeTab", "desktopCapture"],
+  "optional_permissions": [],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
