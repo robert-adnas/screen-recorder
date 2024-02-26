@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 220px;
+  background-color: transparent;
+  justify-content: space-around;
+  padding: 8px;
+}
+
+button {
+  flex: 1;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#startRecordingButton {
+  margin-right: 10px; 
+}
+
+
+#startRecordingButton:last-child  {
+  margin-right: 0; 
+} 
+
+#takeScreenshotButton {
+  background-color: #2196F3;
+}
+
+button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+}
+
+button:hover {
+  background-color: #d32f2f; 
+}
+
+button:hover#takeScreenshotButton {
+  background-color: #1976D2; 
+}
+
+button[title] {
+  position: relative;
+}
+
+button[title]::after {
+  content: attr(title);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 3px 6px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+button[title]:hover::after {
+  opacity: 1; 
+}

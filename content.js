@@ -28,6 +28,15 @@ chrome.runtime.onMessage.addListener((request) => {
   closeButton.style.top = '20px';
   closeButton.style.right = '20px';
   closeButton.style.zIndex = 1000000;
+  closeButton.style.flex = '1';
+  closeButton.style.backgroundColor = "#f44336";
+  closeButton.style.color = "white";
+  closeButton.style.border = "none";
+  closeButton.style.padding = "8px 12px";
+  closeButton.style.borderRadius = "6px";
+  closeButton.style.fontSize = "14px";
+  closeButton.style.cursor = "pointer";
+  closeButton.style.boxShadow = "2px 3px 5px rgba(0, 0, 0, 0.1)";
 
   const removeOverlay = () => {
     document.body.removeChild(overlay);
